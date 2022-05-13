@@ -1,0 +1,1 @@
+type Permutation<T> = T extends never ? [] : [...T]
