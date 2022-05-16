@@ -45,7 +45,7 @@ type arrRemove4 = RemoveItem<arr, 4>;
 type arrRemove6 = RemoveItem<arr, 6>;
 
 // Array构造器
-type BuildArr<Length extends number, Ele, Arr extends unknown[] = []> =
+type BuildArr<Length extends number, Ele=unknown, Arr extends unknown[] = []> =
   Arr["length"] extends Length ? Arr : BuildArr<Length, Ele, [...Arr, Ele]>;
 
 type showBuildArr = BuildArr<5, 1>;
